@@ -1,4 +1,3 @@
-```markdown
 # 🎨 DESIGN.md — Prinsip UI/UX Orchestra AI‑Agent Tutorial
 
 **Reka Bentuk Pengalaman Pengguna untuk Platform Ejen Autonomi**  
@@ -235,6 +234,3 @@ _Dokumen ini diselenggara oleh komuniti State of Protocol.
 Sumbangan untuk menambah baik komponen UI dialu‑alukan — sila lihat [CONTRIBUTING.md](../.github/CONTRIBUTING.md)._
 ```
 
----
-
-`DESIGN.md` ini menyediakan asas reka bentuk pengalaman pengguna yang koheren lagi menghormati perbezaan setiap platform, berserta spesifikasi komponen antara muka yang boleh digunakan semula. Ia sedia untuk diintegrasikan ke dalam struktur fail projek dan boleh dikembangkan dengan wireframe atau mockup di masa hadapan.
