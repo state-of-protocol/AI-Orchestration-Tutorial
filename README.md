@@ -16,6 +16,10 @@
 </p>
 
 <p align="center">
+  <!-- PAUTAN BAHARU: Laman Web Interaktif -->
+  <a href="https://state-of-protocol.github.io/orchestra-website/">
+    <img src="https://img.shields.io/badge/🌐-Laman_Web_Interaktif-4285F4?style=for-the-badge" alt="Laman Web Interaktif">
+  </a>
   <a href="https://github.com/state-of-protocol/AI-Orchestration-Tutorial/stargazers">
     <img src="https://img.shields.io/github/stars/state-of-protocol/AI-Orchestration-Tutorial?style=social" alt="GitHub Stars">
   </a>
@@ -35,6 +39,7 @@
 ## 📖 Table of Contents
 
 - [What Is This?](#-what-is-this)
+- [🌐 Interactive Website & Tools](#-interactive-website--tools)  <!-- BAHARU -->
 - [Why Orchestra AI‑Agent?](#-why-orchestra-ai-agent)
 - [Platform Comparison Matrix](#-platform-comparison-matrix)
 - [Repository Structure](#-repository-structure)
@@ -45,6 +50,7 @@
 - [Learning Paths](#-learning-paths)
 - [The 7‑File Documentation Framework](#-the-7-file-documentation-framework)
 - [Prerequisites](#-prerequisites)
+- [📄 Whitepaper](#-whitepaper)  <!-- BAHARU -->
 - [Contributing](#-contributing)
 - [Community](#-community)
 - [License](#-license)
@@ -63,7 +69,24 @@
 
 > **The problem:** Every platform has a fundamentally different architecture for agent orchestration. Google runs agents inside managed Linux sandboxes; Anthropic connects agents through the Model Context Protocol (MCP); DeepSeek relies on Mixture‑of‑Experts (MoE) routing and Engram conditional memory. Learning one platform does **not** teach you the others.
 >
-> **Our solution:** Three independent "mini‑academies" inside one repository — each with its own tech stack, design philosophy, architecture, API spec, coding rules, and phased user flow.
+> **Our solution:** Three independent "mini‑academies" inside one repository — each with its own tech stack, design philosophy, architecture, API spec, coding rules, and phased user flow. Plus a companion **interactive website** with live demos, cost calculator, and Vibe Code Playground.
+
+---
+
+## 🌐 Interactive Website & Tools  <!-- BAHARU -->
+
+**[🌐 Buka Laman Web Interaktif](https://state-of-protocol.github.io/orchestra-website/)**
+
+Projek ini disertakan dengan **laman web interaktif penuh** yang dibina khas untuk memudahkan pembelajaran dan eksperimen:
+
+| Komponen Laman Web | Tujuan | Pautan Terus |
+|-------------------|--------|-------------|
+| **🏠 Laman Utama** | Hab utama dengan perbandingan platform, demo penstriman ejen, dan penjejak kemajuan | [Laman Utama](https://state-of-protocol.github.io/orchestra-website/) |
+| **🧮 Kalkulator Kos Token** | Anggarkan kos API serta-merta (USD & MYR) — bandingkan semua 6 model | [Kalkulator](https://state-of-protocol.github.io/orchestra-website/cost-calculator.html) |
+| **🧪 Vibe Code Playground** | Tulis dan jalankan kod ejen terus dalam pelayar (Cloud & Local mode) | [Playground](https://state-of-protocol.github.io/orchestra-website/#vibe-code) |
+| **🖥️ Demo Penstriman** | Simulasi langsung ejen "berfikir" dan memanggil alatan | [Demo](https://state-of-protocol.github.io/orchestra-website/#demo) |
+
+> 💡 **Tip:** Guna kalkulator kos untuk menganggar bajet sebelum memilih platform. Kemudian, terus ke Vibe Code Playground untuk menguji kod boilerplate tanpa perlu memasang apa-apa!
 
 ---
 
@@ -71,7 +94,7 @@
 
 - **Production‑grade from Day 1:** Every tutorial follows the same **7‑file specification framework** used by Senior Systems Engineers and Master Architects to prevent scope creep (`SKILL.md`, `DESIGN.md`, `STRUCTURE.md`, `ARCHITECTURE.md`, `API_SPEC.md`, `RULES.md`, `USER_FLOW.md`).
 - **Copy‑paste ready:** Boilerplate code, MCP server configs, Docker Compose files, and `AGENTS.md` skill definitions included for every platform.
-- **Cost‑aware:** Built‑in token calculators and pricing references help you budget before you build.
+- **Cost‑aware:** Built‑in token calculators and pricing references help you budget before you build. Try the **[🧮 interactive cost calculator](https://state-of-protocol.github.io/orchestra-website/cost-calculator.html)** on the website.
 - **Community‑driven:** Discord server + forum for cross‑platform orchestration discussions.
 
 ---
@@ -100,48 +123,50 @@ AI-Orchestration-Tutorial/
 ├── README.md                          # ← You are here
 │
 ├── google-ai-studio/                  # 🏛️ Academy 1: Managed Infrastructure
-│   ├── SKILL.md                       #   Tech stack & core SDK
-│   ├── DESIGN.md                      #   UI/UX for streaming & multimodal inputs
-│   ├── STRUCTURE.md                   #   File hierarchy (.antigravity/, config/, src/)
-│   ├── ARCHITECTURE.md                #   Data flow: Gemini API → Sandbox → Streaming UI
-│   ├── API_SPEC.md                    #   Endpoints & schemas (Interactions API)
-│   ├── RULES.md                       #   Constraints (Context Caching, Safety Thresholds)
-│   ├── USER_FLOW.md                   #   Phased roadmap (3 phases)
+│   ├── SKILL.md
+│   ├── DESIGN.md
+│   ├── STRUCTURE.md
+│   ├── ARCHITECTURE.md
+│   ├── API_SPEC.md
+│   ├── RULES.md
+│   ├── USER_FLOW.md
 │   └── boilerplate/
-│       ├── agent.py                   #   Managed agent with google-genai SDK
-│       ├── .antigravity/              #   Sandbox config
-│       └── skills/                    #   AGENTS.md skill definitions
+│       ├── agent.py
+│       ├── .antigravity/
+│       └── skills/
 │
 ├── anthropic-claude/                  # 🦉 Academy 2: Precision & MCP
 │   ├── SKILL.md
-│   ├── DESIGN.md                      #   Split‑screen Artifacts UI + Thinking toggle
-│   ├── STRUCTURE.md                   #   mcp_servers/, agents/ (coordinator, coder, reviewer)
-│   ├── ARCHITECTURE.md                #   Coordinator → Sub‑agents → MCP Server → Output
-│   ├── API_SPEC.md                    #   MCP SSE endpoint + collab session API
-│   ├── RULES.md                       #   Thinking budget_tokens, input sanitization
+│   ├── DESIGN.md
+│   ├── STRUCTURE.md
+│   ├── ARCHITECTURE.md
+│   ├── API_SPEC.md
+│   ├── RULES.md
 │   ├── USER_FLOW.md
 │   └── boilerplate/
-│       ├── mcp-config.json            #   MCP server access permissions
-│       ├── coordinator.ts             #   Claude Opus — task decomposition
-│       ├── coder.ts                   #   Claude Sonnet — implementation sub‑agent
-│       └── reviewer.ts                #   Claude Sonnet — QC sub‑agent
+│       ├── mcp-config.example.json
+│       ├── coordinator.ts
+│       ├── coder.ts
+│       └── reviewer.ts
 │
 ├── deepseek/                          # 🐉 Academy 3: Efficiency & Scale
 │   ├── SKILL.md
-│   ├── DESIGN.md                      #   Cost counter widget + Two‑stage output (CoT / Answer)
-│   ├── STRUCTURE.md                   #   docker-compose.yml, memory/, chains/
-│   ├── ARCHITECTURE.md                #   Cache → V4‑Pro → R1 CoT → Merged output
-│   ├── API_SPEC.md                    #   OpenAI‑compatible endpoint + metrics endpoint
-│   ├── RULES.md                       #   <think> tag parser, Prompt Compression
+│   ├── DESIGN.md
+│   ├── STRUCTURE.md
+│   ├── ARCHITECTURE.md
+│   ├── API_SPEC.md
+│   ├── RULES.md
 │   ├── USER_FLOW.md
 │   └── boilerplate/
-│       ├── docker-compose.yml         #   vLLM/Ollama + Redis cluster
-│       ├── engram_hash.py             #   Engram conditional memory
-│       └── deepseek_r1.py             #   CoT chain handler with regex parser
+│       ├── docker-compose.yml
+│       ├── engram_hash.py
+│       └── deepseek_r1.py
+│
+├── WHITEPAPER.md                      # 📄 Full project architecture & philosophy
 │
 ├── shared/
-│   ├── cost-calculator/               #   Interactive token cost calculator (HTML/JS)
-│   └── comparison/                    #   Cross‑platform benchmarks & decision guide
+│   ├── cost-calculator/               # Standalone token cost calculator
+│   └── comparison/                    # Cross‑platform benchmarks
 │
 └── .github/
     ├── CONTRIBUTING.md
@@ -174,7 +199,8 @@ python boilerplate/deepseek_r1.py \
 # ✅ Analysis complete. Found 3 circular dependencies. Report saved to deps-report.json.
 ```
 
-> 💡 **Cost:** This analysis processes ~200K tokens. With DeepSeek V4‑Pro at $0.0036/M input tokens (cache hit), the total cost is **less than $0.01**.
+> 💡 **Cost:** This analysis processes ~200K tokens. With DeepSeek V4‑Pro at $0.0036/M input tokens (cache hit), the total cost is **less than $0.01**.  
+> 🧮 **Try our [interactive cost calculator](https://state-of-protocol.github.io/orchestra-website/cost-calculator.html)** to estimate your own costs.
 
 ---
 
@@ -188,21 +214,15 @@ cd AI-Orchestration-Tutorial/anthropic-claude
 npm install @anthropic-ai/sdk @modelcontextprotocol/sdk
 # or: pip install anthropic mcp
 
-# 3. Configure your MCP server (connects Claude to your local filesystem & database)
+# 3. Configure your MCP server
 cp boilerplate/mcp-config.example.json mcp-config.json
 # Edit mcp-config.json with your database credentials and allowed paths
 
 # 4. Start the multi‑agent Dev Team
 npm run dev-team -- --task "Refactor the authentication module to use JWT instead of sessions"
-
-# What happens:
-# 1. Coordinator (Claude Opus) analyzes the codebase and creates a task plan
-# 2. Coder sub‑agent (Claude Sonnet) implements changes file by file
-# 3. Reviewer sub‑agent (Claude Sonnet) runs tests and approves/rejects each change
-# 4. Coordinator merges approved changes and generates a summary
 ```
 
-> 🔐 **Safety:** The `mcp-config.json` enforces a whitelist of directories the agent can modify. No file outside the allowed paths can be written.
+> 🔐 **Safety:** The `mcp-config.json` enforces a whitelist of directories the agent can modify.
 
 ---
 
@@ -217,27 +237,23 @@ export GEMINI_API_KEY="your-key-here"
 
 # 3. Install the Google GenAI SDK
 pip install google-genai
-# or: npm install @google/genai
 
 # 4. Run a Managed Agent — one API call, full Linux sandbox
 python boilerplate/agent.py
 ```
 
 ```python
-# boilerplate/agent.py — The entire agent in 4 lines
+# The entire agent in 4 lines
 from google import genai
 
 client = genai.Client()
 interaction = client.interactions.create(
     agent="antigravity-preview-05-2026",
     input="Analyze this CSV, find the top 5 trends, and generate a visualization as chart.png.",
-    environment="remote",  # Provisions a fresh Linux sandbox automatically
+    environment="remote",
 )
 print(interaction.output_text)
-# The sandbox persists! Files and state survive across calls.
 ```
-
-> 🔄 **Persistence:** Use `previous_interaction_id` and `environment_id` to resume the same sandbox hours or days later. All files, installed packages, and agent state are preserved.
 
 ---
 
@@ -247,29 +263,25 @@ Every platform academy follows an identical **three‑phase progression**:
 
 | Phase | What You Build | Google AI Studio | Anthropic Claude | DeepSeek |
 | :---: | :--- | :--- | :--- | :--- |
-| **1** | Basic API integration + system instructions | Gemini Flash chat with Context Caching | Single Claude call with Extended Thinking | OpenAI‑compatible endpoint + regex CoT parser |
-| **2** | Tool calling & external service connection | Google Workspace extensions (Gmail, Sheets, Docs) | MCP Server exposing local filesystem + database | Engram memory layer with Redis cache |
-| **3** | Full autonomous agent orchestration | Managed Agent with persistent sandbox + custom skills (`AGENTS.md`) | Multi‑agent Dev Team (Coordinator → Coder → Reviewer) | Massive‑scale batch processing with prompt compression |
+| **1** | Basic API integration | Gemini Flash chat | Single Claude call | OpenAI‑compatible endpoint |
+| **2** | Tool calling | Google Workspace extensions | MCP Server + database | Engram memory layer |
+| **3** | Full agent orchestration | Managed Agent + sandbox | Multi‑agent Dev Team | Batch processing at scale |
 
-> 🧭 **Not sure where to start?** Use our [interactive decision guide](shared/comparison/) to match your project requirements to the right platform.
+> 🧭 **Not sure where to start?** Use our **[interactive comparison matrix](https://state-of-protocol.github.io/orchestra-website/#comparison)** on the website to find the best platform for your project.
 
 ---
 
 ## 📐 The 7‑File Documentation Framework
 
-Every academy is structured using a battle‑tested specification framework designed to prevent scope creep in agent projects. Here's what each file defines:
-
-| # | File | Purpose | Key Question Answered |
-| :---: | :--- | :--- | :--- |
-| 1 | **`SKILL.md`** | Tech stack, core SDKs, runtime requirements | *"What do I need installed?"* |
-| 2 | **`DESIGN.md`** | UI/UX principles, streaming patterns, multimodal controls | *"How should the user experience feel?"* |
-| 3 | **`STRUCTURE.md`** | File hierarchy, folder conventions, config locations | *"Where does everything live?"* |
-| 4 | **`ARCHITECTURE.md`** | Data flow diagrams, component interactions, agent loops | *"How do the pieces connect?"* |
-| 5 | **`API_SPEC.md`** | Endpoints, request/response schemas, authentication | *"What does the API contract look like?"* |
-| 6 | **`RULES.md`** | Coding constraints, safety thresholds, platform‑specific gotchas | *"What must I NEVER do?"* |
-| 7 | **`USER_FLOW.md`** | Phased development roadmap (Phase 1 → 2 → 3) | *"What do I build first?"* |
-
-> This framework is used by Master Architects and Senior Systems Engineers in production environments. Learning to read and write these 7 documents is a transferable skill across all agent platforms.
+| # | File | Purpose |
+| :---: | :--- | :--- |
+| 1 | **`SKILL.md`** | Tech stack, SDKs, runtime requirements |
+| 2 | **`DESIGN.md`** | UI/UX principles, streaming patterns |
+| 3 | **`STRUCTURE.md`** | File hierarchy, folder conventions |
+| 4 | **`ARCHITECTURE.md`** | Data flow diagrams, agent loops |
+| 5 | **`API_SPEC.md`** | Endpoints, request/response schemas |
+| 6 | **`RULES.md`** | Coding constraints, safety thresholds |
+| 7 | **`USER_FLOW.md`** | Phased development roadmap |
 
 ---
 
@@ -277,37 +289,34 @@ Every academy is structured using a battle‑tested specification framework desi
 
 | Requirement | Google AI Studio | Anthropic Claude | DeepSeek |
 | :--- | :---: | :---: | :---: |
-| **API Key** | [Google AI Studio](https://aistudio.google.com/apikey) (free tier available) | [Anthropic Console](https://console.anthropic.com/) | [DeepSeek Platform](https://platform.deepseek.com/) |
-| **Runtime** | Python 3.11+ or Node.js 22+ | TypeScript / Node.js 18+ or Python 3.10+ | Python 3.10+ |
-| **Key SDK** | `google-genai` | `@anthropic-ai/sdk` + `@modelcontextprotocol/sdk` | `openai` (OpenAI‑compatible) |
-| **Optional** | Antigravity CLI (`agy`) | Claude Code CLI | Docker (for self‑hosted vLLM/Ollama) |
-| **Cost (approx.)** | Free tier: 1,500 requests/day | Pay‑per‑token from first call | Pay‑per‑token; V4‑Pro at **75% permanent discount** |
+| **API Key** | [Google AI Studio](https://aistudio.google.com/apikey) | [Anthropic Console](https://console.anthropic.com/) | [DeepSeek Platform](https://platform.deepseek.com/) |
+| **Runtime** | Python 3.11+ or Node.js 22+ | TypeScript / Node.js 18+ | Python 3.10+ |
+| **Key SDK** | `google-genai` | `@anthropic-ai/sdk` + MCP SDK | `openai` |
+
+---
+
+## 📄 Whitepaper
+
+Untuk pemahaman yang lebih mendalam tentang seni bina projek, falsafah reka bentuk, dan peta rujukan silang antara laman web dan dokumentasi, baca **[WHITEPAPER.md](./WHITEPAPER.md)**.
 
 ---
 
 ## 🤝 Contributing
 
-We welcome contributions! Here's how to get involved:
-
-1. **🐛 Found a bug?** Open an [Issue](https://github.com/state-of-protocol/AI-Orchestration-Tutorial/issues).
-2. **📚 Want to add a tutorial?** Fork the repo, follow the 7‑file framework in the relevant academy folder, and submit a PR.
-3. **🌐 Want to translate?** We're actively seeking translations for Bahasa Malaysia, 中文, 日本語, and Español.
-
-See [`CONTRIBUTING.md`](.github/CONTRIBUTING.md) for detailed guidelines, coding standards, and PR checklists.
+See [`CONTRIBUTING.md`](.github/CONTRIBUTING.md) for detailed guidelines.
 
 ---
 
 ## 💬 Community
 
-- **[Discord Server](https://discord.gg/example)** — Live discussions on cross‑platform orchestration, debugging help, and weekly office hours.
-- **[GitHub Discussions](https://github.com/state-of-protocol/AI-Orchestration-Tutorial/discussions)** — Long‑form Q&A, architecture debates, and showcase your agent projects.
-- **[Twitter / X](https://twitter.com/example)** — Updates on new tutorials, platform changes, and community highlights.
+- **[Discord](https://discord.gg/example)** — Live discussions
+- **[GitHub Discussions](https://github.com/state-of-protocol/AI-Orchestration-Tutorial/discussions)** — Q&A
 
 ---
 
 ## 📄 License
 
-This project is licensed under the **MIT License** — see the [`LICENSE`](LICENSE) file for details.
+MIT License — see [`LICENSE`](LICENSE).
 
 ---
 
@@ -318,21 +327,3 @@ This project is licensed under the **MIT License** — see the [`LICENSE`](LICEN
 ```
 
 ---
-
-## 📝 Nota Penulis
-
-README ini telah saya bina dengan ciri-ciri berikut:
-
-1. **Menggunakan data teknikal terkini Mei 2026** — Gemini 3.5 Flash + Antigravity 2.0 + Managed Agents (Google I/O 2026, 19 Mei), Claude Opus 4.6 / Sonnet 4.6 dengan Adaptive Thinking & MCP (Feb 2026), DeepSeek V4-Pro 1.6T parameter dengan pemotongan harga kekal 75% (pengumuman 22 Mei 2026).
-
-2. **Quick Start untuk setiap platform** — Setiap seksyen mempunyai kod `copy-paste ready` yang boleh dijalankan serta-merta.
-
-3. **Struktur repositori yang lengkap** — Mencerminkan pembahagian tiga "Akademi" seperti yang kita bincangkan sebelum ini, termasuk folder `boilerplate/`, `shared/`, dan `.github/`.
-
-4. **7-File Framework** diterangkan dengan jelas dalam jadual supaya pelajar memahami tujuan setiap dokumen spesifikasi.
-
-5. **Learning Paths** 3-fasa yang seragam merentas ketiga-tiga platform memudahkan perbandingan.
-
-6. **Platform Comparison Matrix** di awal README membantu pengguna memilih platform yang sesuai dengan keperluan projek mereka.
-
-7. **Badges, ToC, Community links** — mengikut amalan terbaik GitHub README 2026 untuk discoverability dan social proof.
