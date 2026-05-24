@@ -41,7 +41,7 @@ Pastikan anda telah menyediakan persekitaran pembangunan seperti yang dijelaskan
 
 ## 2. Pilih Trek Anda
 
-Tidak pasti platform mana yang sesuai? Kembali ke [Matriks Perbandingan](../README.md#📊-platform-comparison-matrix) di README atau gunakan [kalkulator kos interaktif](../shared/cost-calculator/index.html) untuk membuat keputusan. Anda boleh mengikuti trek secara berasingan; tidak perlu mempelajari ketiga‑tiga sekali gus.
+Tidak pasti platform mana yang sesuai? Kembali ke [Matriks Perbandingan](../README.md#📊-platform-comparison-matrix) di README atau gunakan [kalkulator kos interaktif](https://state-of-protocol.github.io/orchestra-website/cost-calculator.html) untuk membuat keputusan. Anda boleh mengikuti trek secara berasingan; tidak perlu mempelajari ketiga‑tiga sekali gus.
 
 ---
 
@@ -312,7 +312,7 @@ Tidak pasti platform mana yang sesuai? Kembali ke [Matriks Perbandingan](../READ
 
 3. Perhatikan output dalam terminal: setiap langkah coordinator, output coder, dan keputusan reviewer dipaparkan dengan jelas.
 
-4. Uji dengan tugas lain: “Tambah ujian unit untuk modul X”, “Dokumentasikan API”.
+4. Uji dengan tugas lain: "Tambah ujian unit untuk modul X", "Dokumentasikan API".
 
 5. Sesuaikan prompt sistem untuk setiap ejen mengikut keperluan projek anda.
 
@@ -446,6 +446,8 @@ Tidak pasti platform mana yang sesuai? Kembali ke [Matriks Perbandingan](../READ
 
 Tahniah! Anda kini boleh membina ejen autonomi menggunakan mana‑mana platform. Berikut adalah cadangan laluan seterusnya:
 
+- **🧪 Cuba Vibe Code Playground:** Uji kod ejen terus dalam pelayar tanpa perlu memasang apa-apa. Buka **[Vibe Code Playground](https://state-of-protocol.github.io/orchestra-website/#vibe-code)** dan mula mengekod.
+
 - **Gabungkan platform:** Gunakan DeepSeek untuk prapemprosesan murah, hantar ringkasan ke Claude untuk pengekodan tepat, dan Google untuk analisis multimodal. Lihat [Pola Orkestrasi Rentas Platform](./ARCHITECTURE.md#6-pola-orkestrasi-rentas-platform-konseptual).
 
 - **Sumbang semula:** Perbaiki tutorial, tambah contoh baharu, atau terjemah ke bahasa lain. Sila lihat [CONTRIBUTING.md](../.github/CONTRIBUTING.md).
@@ -460,3 +462,5 @@ _Dokumen ini adalah sebahagian daripada rangka kerja 7-fail Orchestra AI‑Agent
 
 _Selamat membina ejen! 🚀_
 ```
+
+---
