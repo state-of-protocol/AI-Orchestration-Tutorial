@@ -25,14 +25,14 @@ Dokumen ini mentakrifkan falsafah, prinsip, dan corak reka bentuk antara muka pe
 
 ## 1. Falsafah Reka Bentuk
 
-Setiap platform ejen AI mempunyai **DNA seni bina** yang berbeza. UI/UX tidak boleh bersifat “satu saiz muat semua”. Sebaliknya, antara muka mesti menghormati dan menonjolkan kekuatan asli platform:
+Setiap platform ejen AI mempunyai **DNA seni bina** yang berbeza. UI/UX tidak boleh bersifat "satu saiz muat semua". Sebaliknya, antara muka mesti menghormati dan menonjolkan kekuatan asli platform:
 
 - 🏛️ **Google AI Studio** → Ketelusan & automasi tanpa kusut (*frictionless automation*).
 - 🦉 **Anthropic Claude** → Kejelasan & kawalan penuh ke atas proses pemikiran ejen.
 - 🐉 **DeepSeek** → Kecekapan & kesedaran kos yang telus.
 
 **Prinsip teras kami:**  
-> *“UI bukan sekadar pembalut untuk API; ia adalah tingkap kepada minda ejen. Pengguna mesti memahami **apa** yang ejen lakukan, **mengapa** ia melakukannya, dan **berapa** kosnya.”*
+> *"UI bukan sekadar pembalut untuk API; ia adalah tingkap kepada minda ejen. Pengguna mesti memahami **apa** yang ejen lakukan, **mengapa** ia melakukannya, dan **berapa** kosnya."*
 
 ---
 
@@ -42,8 +42,8 @@ Prinsip ini terpakai pada **semua** platform dan komponen UI yang dibangunkan da
 
 | Prinsip | Penerangan |
 |--------|-------------|
-| **Ketelusan Proses** | Setiap tindakan ejen (tool call, thinking, carian) mesti dipaparkan secara langsung kepada pengguna, bukan di sebalik “loading spinner”. |
-| **Maklum Balas Segera** | Gunakan penstriman (*streaming*) token demi token. Jangan tunggu respons lengkap. Pengguna perlu melihat ejen “berfikir”. |
+| **Ketelusan Proses** | Setiap tindakan ejen (tool call, thinking, carian) mesti dipaparkan secara langsung kepada pengguna, bukan di sebalik "loading spinner". |
+| **Maklum Balas Segera** | Gunakan penstriman (*streaming*) token demi token. Jangan tunggu respons lengkap. Pengguna perlu melihat ejen "berfikir". |
 | **Hierarki Visual** | Proses pemikiran (CoT) → Tindakan (tool call) → Output akhir. Lapisan ini mesti dibezakan secara visual dengan warna, inden, atau ikon. |
 | **Kawalan Pengguna** | Pengguna boleh menjeda, membatalkan, atau mengubah hala ejen pada bila‑bila masa. Ejen bukan kotak hitam. |
 | **Kesedaran Kos** | Paparkan anggaran token dan kos dalam mata wang sebenar (RM / USD) secara masa nyata semasa ejen beroperasi. |
@@ -56,11 +56,11 @@ Prinsip ini terpakai pada **semua** platform dan komponen UI yang dibangunkan da
 
 ### 3.1 Google AI Studio – *The Seamless Automator*
 
-**Falsafah:** Ejen beroperasi dalam persekitaran terurus (Linux sandbox). Pengguna tidak perlu melihat butiran infrastruktur — hanya input dan output. UI mesti terasa ringan dan “ajaib”.
+**Falsafah:** Ejen beroperasi dalam persekitaran terurus (Linux sandbox). Pengguna tidak perlu melihat butiran infrastruktur — hanya input dan output. UI mesti terasa ringan dan "ajaib".
 
 #### 3.1.1 Streaming UI Masa Nyata
 - Antara muka sembang dengan **penstriman token** yang sangat laju (sub-100ms latency).
-- Gunakan **efek “typewriter”** tetapi dengan kelajuan boleh laras.
+- Gunakan **efek "typewriter"** tetapi dengan kelajuan boleh laras.
 - **Tiada penimbalan** — setiap token dipaparkan sebaik diterima daripada API Gemini.
 
 #### 3.1.2 Kawalan Input Multimodal
@@ -70,11 +70,11 @@ Prinsip ini terpakai pada **semua** platform dan komponen UI yang dibangunkan da
 
 #### 3.1.3 Indikator Persekitaran Sandbox
 - Ikon status kecil: `🟢 Sandbox ready` / `🟡 Provisioning` / `🔴 Terminated`.
-- Butang “Lihat Fail Sandbox” — membuka file explorer ringkas dalam modal untuk melihat fail yang dijana oleh ejen (CSV, PNG, dsb.).
+- Butang "Lihat Fail Sandbox" — membuka file explorer ringkas dalam modal untuk melihat fail yang dijana oleh ejen (CSV, PNG, dsb.).
 - Riwayat persekitaran — pengguna boleh menyambung semula sandbox terdahulu.
 
 #### 3.1.4 Integrasi Google Workspace
-- Butang “Sambung ke Gmail / Sheets” dengan OAuth flow yang lancar.
+- Butang "Sambung ke Gmail / Sheets" dengan OAuth flow yang lancar.
 - UI untuk memilih dokumen atau helaian terus dari pemilih fail Google Drive.
 
 ---
@@ -85,13 +85,13 @@ Prinsip ini terpakai pada **semua** platform dan komponen UI yang dibangunkan da
 
 #### 3.2.1 Antara Muka Dwi‑Panel (Split‑Screen)
 - **Panel Kiri:** Ruang sembang dengan input pengguna dan respons ejen.
-- **Panel Kanan:** “Artifacts Workspace” — memaparkan kod, dokumen, atau visualisasi yang dihasilkan oleh Claude secara langsung.
+- **Panel Kanan:** "Artifacts Workspace" — memaparkan kod, dokumen, atau visualisasi yang dihasilkan oleh Claude secara langsung.
 - Kedua‑dua panel boleh diskrol secara bebas.
 - Pengguna boleh mengubah saiz panel (seret pembahagi).
 
 #### 3.2.2 Thinking Process Toggle
 - Setiap respons mengandungi bahagian `<thinking>` yang boleh **dikembangkan/disembunyikan**.
-- Ikon “🧠” di sebelah kiri mesej — klik untuk melihat rantaian pemikiran penuh.
+- Ikon "🧠" di sebelah kiri mesej — klik untuk melihat rantaian pemikiran penuh.
 - Thinking process dipaparkan dalam **fon monospace** dengan latar belakang kelabu gelap yang berbeza.
 - **Penapis tahap pemikiran:** Pengguna boleh menetapkan hanya mahu lihat ringkasan pemikiran atau pemikiran penuh.
 
@@ -102,9 +102,9 @@ Prinsip ini terpakai pada **semua** platform dan komponen UI yang dibangunkan da
 - Pengguna boleh klik pada kad sub‑ejen untuk melihat output dan log mereka.
 
 #### 3.2.4 Kawalan MCP (Model Context Protocol)
-- Panel “Sambungan MCP” di bahagian bawah kiri — menunjukkan pelayan MCP yang disambungkan:
+- Panel "Sambungan MCP" di bahagian bawah kiri — menunjukkan pelayan MCP yang disambungkan:
   - `filesystem` (✅), `postgres-db` (✅), `web-search` (🔌 terputus).
-- Butang “Tambah Pelayan MCP” dengan wizard konfigurasi `mcp-config.json` secara visual.
+- Butang "Tambah Pelayan MCP" dengan wizard konfigurasi `mcp-config.json` secara visual.
 
 ---
 
@@ -116,12 +116,12 @@ Prinsip ini terpakai pada **semua** platform dan komponen UI yang dibangunkan da
 - Bar status tetap di bahagian atas atau bawah:
   - `📊 Token: 12,450 / 1,000,000 | 💰 Anggaran Kos: RM 0.03 (USD 0.006)`
 - Kemas kini **setiap saat** semasa ejen memproses.
-- **Penunjuk penjimatan:** “Anda menjimatkan 85% berbanding GPT-5 untuk beban kerja yang sama” (hijau).
+- **Penunjuk penjimatan:** "Anda menjimatkan 85% berbanding GPT-5 untuk beban kerja yang sama" (hijau).
 - Graf penggunaan token dari semasa ke semasa (opsional, dalam panel sisi).
 
 #### 3.3.2 Persembahan Output Dua Peringkat
-- **Peringkat 1: Kotak “Jalan Fikiran”** — dipaparkan di atas jawapan utama, boleh diruntuhkan.
-  - Berlabel “🧠 Rantaian Pemikiran (R1)” dengan sempadan bertitik.
+- **Peringkat 1: Kotak "Jalan Fikiran"** — dipaparkan di atas jawapan utama, boleh diruntuhkan.
+  - Berlabel "🧠 Rantaian Pemikiran (R1)" dengan sempadan bertitik.
   - Mengandungi teks di antara tag `<think>…</think>`.
 - **Peringkat 2: Jawapan Utama** — dipaparkan di bawah, bersih dan terus kepada tindakan.
 
@@ -161,9 +161,11 @@ Untuk membina antara muka yang konsisten, kami mengesyorkan komponen‑komponen 
 
 Laman web utama `orchestra-ai-agent.edu.my` (atau GitHub Pages) dibina mengikut prinsip berikut:
 
+> 🎨 **Lihat prinsip-prinsip ini dalam tindakan:** Layari **[Laman Web Interaktif Orchestra AI](https://state-of-protocol.github.io/orchestra-website/)** yang dibina mengikut spesifikasi UI/UX yang diterangkan di sini.
+
 ### 5.1 Navigasi Tiga Lorong
 - **Navbar Utama:** `Laman Utama | Google AI | Claude | DeepSeek | Perbandingan | Komuniti`
-- Setiap lorong (“akademi”) mempunyai **warna tema tersendiri** untuk pembezaan segera:
+- Setiap lorong ("akademi") mempunyai **warna tema tersendiri** untuk pembezaan segera:
   - Google AI Studio: `#4285F4` (Google Blue)
   - Anthropic Claude: `#D97706` (Amber/Orange)
   - DeepSeek: `#059669` (Emerald Green)
@@ -187,7 +189,7 @@ Laman web utama `orchestra-ai-agent.edu.my` (atau GitHub Pages) dibina mengikut 
 ## 6. Aliran Kerja Pengguna (User Flow)
 
 ### 6.1 Aliran Pengguna Baru
-1. **Laman Utama** → Pilih platform berdasarkan cadangan (soal selidik pantas: “Apa yang anda mahu bina?”).
+1. **Laman Utama** → Pilih platform berdasarkan cadangan (soal selidik pantas: "Apa yang anda mahu bina?").
 2. **Halaman Platform** → Baca pengenalan, lihat demo video 2 minit.
 3. **Pra‑keperluan** → Dapatkan API key melalui panduan bergambar.
 4. **Quick Start** → Jalankan kod pertama (copy‑paste), lihat output.
@@ -206,7 +208,7 @@ Laman web utama `orchestra-ai-agent.edu.my` (atau GitHub Pages) dibina mengikut 
 ## 7. Responsif & Kebolehcapaian
 
 - **Mudah Alih:** Antara muka dwi‑panel (Claude) bertukar kepada mod tab pada skrin <768px. Panel Artifacts menjadi lapisan bawah yang boleh ditarik ke atas.
-- **Pembaca Skrin:** Semua mesej ejen mempunyai atribut `aria-label` yang membezakan “pemikiran”, “tindakan”, dan “output”. Kawasan penstriman menggunakan `aria-live="polite"`.
+- **Pembaca Skrin:** Semua mesej ejen mempunyai atribut `aria-label` yang membezakan "pemikiran", "tindakan", dan "output". Kawasan penstriman menggunakan `aria-live="polite"`.
 - **Kontras:** Semua teks memenuhi nisbah kontras 4.5:1 (WCAG AA). Tema gelap diuji dengan alat penyemak kontras.
 - **Navigasi Papan Kekunci:** Semua komponen interaktif boleh dicapai dengan `Tab`, diaktifkan dengan `Enter`/`Space`, dan mempunyai gelang fokus yang jelas.
 
@@ -227,6 +229,7 @@ Memandangkan sasaran pelajar termasuk Malaysia, Indonesia, dan antarabangsa:
 
 - Lihat `ARCHITECTURE.md` dalam setiap folder platform untuk memahami aliran data yang menyokong UI ini.
 - Untuk panduan langkah demi langkah pembangunan, rujuk `USER_FLOW.md`.
+- 🧪 **Cuba sendiri:** Buka **[Vibe Code Playground](https://state-of-protocol.github.io/orchestra-website/#vibe-code)** untuk menguji kod ejen terus dalam pelayar.
 
 ---
 
@@ -234,3 +237,4 @@ _Dokumen ini diselenggara oleh komuniti State of Protocol.
 Sumbangan untuk menambah baik komponen UI dialu‑alukan — sila lihat [CONTRIBUTING.md](../.github/CONTRIBUTING.md)._
 ```
 
+---
