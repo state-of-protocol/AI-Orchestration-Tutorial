@@ -225,6 +225,8 @@ python -c "import openai; print('OK')"
 
 Jika semua arahan di atas mengembalikan `OK`, anda sudah bersedia untuk memulakan tutorial!
 
+> 💰 **Anggarkan kos anda terlebih dahulu:** Sebelum memulakan pengekodan, gunakan **[Kalkulator Kos Token Interaktif](https://state-of-protocol.github.io/orchestra-website/cost-calculator.html)** untuk menganggar perbelanjaan API bagi setiap platform. Ini membantu anda merancang bajet dan memilih platform yang paling menjimatkan untuk beban kerja anda.
+
 ---
 
 ## 📖 Seterusnya
@@ -232,6 +234,7 @@ Jika semua arahan di atas mengembalikan `OK`, anda sudah bersedia untuk memulaka
 - Pilih trek pembelajaran anda dari [README.md](../README.md#-quick-start--pick-your-platform)
 - Rujuk `STRUCTURE.md` dalam folder platform pilihan anda untuk memahami organisasi fail
 - Mulakan dengan `USER_FLOW.md` untuk panduan langkah‑demi‑langkah
+- Layari **[Laman Web Interaktif](https://state-of-protocol.github.io/orchestra-website/)** untuk demo penstriman ejen dan Vibe Code Playground
 
 ---
 
@@ -240,5 +243,3 @@ Lihat [CONTRIBUTING.md](../.github/CONTRIBUTING.md) untuk panduan menyumbang kem
 ```
 
 ---
-
-`SKILL.md` ini bertindak sebagai **spesifikasi induk** untuk keseluruhan projek, membolehkan pelajar menyemak dan menyediakan persekitaran mereka sebelum menyelami mana‑mana trek platform. Ia direka untuk berdiri sendiri sebagai rujukan pantas, sambil kekal selaras dengan struktur 7‑fail yang telah ditetapkan.
