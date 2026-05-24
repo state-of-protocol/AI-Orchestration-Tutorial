@@ -200,7 +200,7 @@ python boilerplate/deepseek_r1.py \
 ```
 
 > 💡 **Cost:** This analysis processes ~200K tokens. With DeepSeek V4‑Pro at $0.0036/M input tokens (cache hit), the total cost is **less than $0.01**.  
-> 🧮 **Try our [interactive cost calculator](https://state-of-protocol.github.io/orchestra-website/cost-calculator.html)** to estimate your own costs.
+> 🧮 **Try our [interactive cost calculator](https://state-of-protocol.github.io/orchestra-website/cost-calculator.html](https://state-of-protocol.github.io/orchestra-website/#calculator)** to estimate your own costs.
 
 ---
 
